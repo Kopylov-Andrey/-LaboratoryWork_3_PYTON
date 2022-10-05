@@ -46,13 +46,9 @@ if(infection):
     addBagpag(gameObject[9])
 if(asthma):
     addBagpag(gameObject[4])
-
-
-
+#сортировка предметов по ценности игровых очков
 for i in range(12):
     weightPoint.append([i, gameObject[i][2], gameObject[i][3]/gameObject[i][2]])
-
-
 
 weightPoint.sort(key=custom_key, reverse=True)
 
@@ -62,20 +58,6 @@ for i in range(6):
 for i in range(6):
     point = point - gameObject[weightPoint[i+6][0]][3]
 
-
-
 print(bagpag[0])
 print(bagpag[1])
 print(f'point: {point}')
-
-
-# list = ["a", "e", "i", "o", "u"]
-# vowels = ["a", "e", "i", "o", "u"]
-# vowels_str = list.join(vowels)
-# print("Строка гласных:", vowels_str)
-
-
-s = [0, -4, 9, 3, 3, -4, 9]
-
-s.remove(-4)
-print(s)
